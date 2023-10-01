@@ -61,6 +61,7 @@ form {
     --gap: 1rem;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     gap: var(--gap);
     background-color: rgba(159, 159, 159, .1);
     padding: 2rem 12rem 2rem 2rem;
@@ -68,7 +69,7 @@ form {
 }
 .form_header {
     flex-basis: 100%;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
 }
 .log-in-button, .form_header {
     color: rgb(201, 41, 41);
@@ -79,8 +80,9 @@ form {
     flex-direction: column;
 }
 .column {
-    /* Each col takes up 50% of row, need to adjust for form gap */
-    flex-basis: calc(50% - (var(--gap)/2));
+    --colgap: 1.5rem;
+    /* Each col takes up 50% of row, need to adjust for form and col gap */
+    flex-basis: calc(50% - (var(--gap)/2) - var(--colgap));
     flex-shrink: 1;
 }
 input {
@@ -92,6 +94,8 @@ button[type='submit'] {
     background-color:  rgb(201, 41, 41);
     color: white;
     font-weight: bold;
+    font-size: 1rem;
     border-radius: .5rem;
+    margin-top: 1rem;
     padding: .5rem 3rem;
 }
