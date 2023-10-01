@@ -2,7 +2,14 @@
     font-family: mukta;
     src: url(./Mukta-Regular.ttf);
 }
-
+@media screen and (max-width: 930px) {
+    body {
+        flex-direction: column;
+    }
+}
+:root {
+    font-size: 12px;
+}
 html {
     height: 100%;
     font-family: mukta, sans-serif;
@@ -22,7 +29,7 @@ body {
     justify-content: center;
     background-image: url(./background.jpg);
     background-size: cover;
-    flex: 1 0 var(--lsidewidth);
+    flex: 1 1 var(--lsidewidth);
 }
 .banner {
     background-color: rgba(108, 122, 137, .75);
@@ -33,7 +40,7 @@ body {
     align-items: center;
     justify-content: center;
     display: flex;
-    white-space: nowrap;
+    white-space: wrap;
     width: 100%;
     gap: 1rem;
     font-size: 3rem;
@@ -43,7 +50,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    flex: 1 1 calc(1 - var(--lsidewidth));
+    flex: 0 1 calc(1 - var(--lsidewidth));
 }
 .header {
     margin-top: 5rem;
@@ -64,7 +71,8 @@ form {
     justify-content: space-between;
     gap: var(--gap);
     background-color: rgba(159, 159, 159, .1);
-    padding: 2rem 12rem 2rem 2rem;
+    box-shadow: 5px 3px 5px rgb(201, 41, 41);
+    padding: 2rem 20rem 2rem 2rem;
     
 }
 .form_header {
@@ -78,17 +86,24 @@ form {
 .column, .subcol {
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
 }
 .column {
-    --colgap: 1.5rem;
-    /* Each col takes up 50% of row, need to adjust for form and col gap */
-    flex-basis: calc(50% - (var(--gap)/2) - var(--colgap));
-    flex-shrink: 1;
+    /* Each col takes up 50% of row, need to adjust for form gap*/
+    flex-basis: calc(50% - (var(--gap)/2));
+    flex-shrink: 0;
 }
 input {
     border-radius: .2rem;
     border: 1px solid grey;
     padding: 5px;
+    max-width: 300px;
+}
+input:focus {
+    box-shadow: 2px 2px 15px rgba(159, 159, 159, .5);
+}
+input[type='password']:invalid {
+    border: 2px solid rgb(201, 41, 41);
 }
 button[type='submit'] {
     background-color:  rgb(201, 41, 41);

@@ -23,29 +23,30 @@
             <div class="column">
                 <div class="subcol">
                     <label for="name_first">First Name</label>
-                    <input id="name_first" type="text">
+                    <input id="name_first" type="text" name="name_first" required>
                 </div>
                 <div class="subcol">
                     <label for="email">Email</label>
-                    <input type="email" id="email">
+                    <input type="email" id="email" name="email" required>
                 </div>
                 <div class="subcol">
                     <label for="password">Password</label>
-                    <input type="password" id="password">
+                    <input type="password" id="password" name="password" required>
+                    <span class="error"></span>
                 </div>
             </div>
             <div class="column">
                 <div class="subcol">
                     <label for="name_last">Last Name</label>
-                    <input id="name_last" type="text">
+                    <input id="name_last" type="text" name="name_last" required>
                 </div>
                 <div class="subcol">
                     <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone">
+                    <input type="tel" id="phone" name="number">
                 </div>
                 <div class="subcol">
                     <label for="password_confirm">Confirm Password</label>
-                    <input type="password" id="password_confirm">
+                    <input type="password" id="password_confirm" required>
                 </div>
             </div>
             <button type="submit">Create Account</button>
