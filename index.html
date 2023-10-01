@@ -20,33 +20,39 @@
         </div>
         <form action="" method="get">
             <div>Let's do this!</div>
-            <div>
-                <label for="name_first">First Name</label>
-                <input id="name_first" type="text">
+            <div class="row">
+                <div>
+                    <label for="name_first">First Name</label>
+                    <input id="name_first" type="text">
+                </div>
+                <div>
+                    <label for="name_last">Last Name</label>
+                    <input id="name_last" type="text">
+                </div>
             </div>
-            <div>
-                <label for="name_last">Last Name</label>
-                <input id="name_last" type="text">
+            <div class="row">
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" id="email">
+                </div>
+                <div>
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone">
+                </div>
             </div>
-            <div>
-                <label for="email">Email</label>
-                <input type="email" id="email">
-            </div>
-            <div>
-                <label for="phone">Phone Number</label>
-                <input type="tel" id="phone">
-            </div>
-            <div>
-                <label for="password">Password</label>
-                <input type="password" id="password">
-            </div>
-            <div>
-                <label for="password_confirm">Confirm Password</label>
-                <input type="password" id="password_confirm">
+            <div class="row">
+                <div>
+                    <label for="password">Password</label>
+                    <input type="password" id="password">
+                </div>
+                <div>
+                    <label for="password_confirm">Confirm Password</label>
+                    <input type="password" id="password_confirm">
+                </div>
             </div>
             <button type="submit">Create Account</button>
         </form>
-        <div class="log-in">Already have an account? Log in</div>
+        <div class="log-in">Already have an account? <span class="log-in-button">Log in</span></div>
     </div>
 </body>
 </html>
